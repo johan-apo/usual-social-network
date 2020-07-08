@@ -1,0 +1,108 @@
+header {
+  height: 8vh;
+  background-color: var(--matte-black);
+  nav {
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    ul {
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      li {
+        display: flex;
+        div,
+        a {
+          display: flex;
+          align-items: center;
+          svg {
+            margin-right: 0.5rem;
+            width: 1.2rem;
+          }
+        }
+        div {
+          cursor: pointer;
+        }
+        a {
+          text-decoration: none;
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+.notifications-container {
+  position: relative;
+  .notification {
+    &--badge::after {
+      content: attr(data-unread-notif);
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background-color: var(--orange);
+      text-align: center;
+      font-size: 0.8rem;
+      position: absolute;
+      bottom: -30%;
+      left: -30%;
+    }
+  }
+  .notif-popup {
+    display: block;
+    background-color: #242424;
+    color: var(--white);
+    border-radius: 10px;
+    z-index: 30;
+    position: absolute;
+    white-space: nowrap;
+    padding: 1.5rem;
+    top: 200%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: initial;
+    &__notification {
+      margin-top: 0.5rem;
+      .notif-icon {
+        width: 0.8rem;
+        height: 0.8rem;
+        &.noread {
+          color: var(--light-orange);
+        }
+        &.isread {
+          color: var(--white);
+        }
+      }
+    }
+    &__cross-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1.2rem;
+      margin: 0.3rem;
+      height: 1.2rem;
+      cursor: pointer;
+      transition: color 0.1s ease-in;
+      &:hover {
+        color: var(--light-orange);
+      }
+    }
+    &__notification-text {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    nav {
+      ul {
+        width: 100%;
+      }
+    }
+  }
+}
