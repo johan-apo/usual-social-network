@@ -1,0 +1,73 @@
+.screams-section {
+  &__card {
+    margin: 1rem;
+    border-radius: 10px;
+    background-color: var(--matte-black);
+  }
+}
+
+.scream-data {
+  padding: 1.5rem;
+  svg {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+  }
+  &__post {
+    margin-bottom: 1rem;
+    line-height: 25px;
+  }
+  &__time {
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+  }
+  &__interactions {
+    display: flex;
+    margin-bottom: 0.5rem;
+    .likes,
+    .comments {
+      display: flex;
+      margin-right: 2rem;
+      svg {
+        margin-right: 0.5rem;
+        &.liked {
+          color: red;
+        }
+        &.commented {
+          color: royalblue;
+        }
+      }
+    }
+  }
+  &__author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg {
+      margin-right: 1rem;
+    }
+    .info-icon:hover {
+      color: skyblue;
+    }
+    .delete-icon:hover {
+      color: red;
+    }
+    div {
+      display: inherit;
+      align-items: center;
+      .scream-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+      }
+      .scream-username {
+        margin-left: 0.75rem;
+        font-weight: 600;
+        color: var(--light-orange);
+      }
+    }
+  }
+}

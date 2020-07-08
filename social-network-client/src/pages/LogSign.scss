@@ -1,0 +1,86 @@
+.login,
+.signup {
+  max-width: 50%;
+  height: 92vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  label {
+    margin-bottom: 0.5rem;
+  }
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    width: 50%;
+    height: 30px;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: none;
+    background: var(--matte-black);
+    color: var(--white);
+    &:focus {
+      border-bottom: 2px solid var(--orange);
+    }
+  }
+
+  input[type="submit"] {
+    color: orange;
+    height: 1.5rem;
+    border: orange 1px solid;
+    background: unset;
+    border-radius: 3px;
+    &:hover {
+      background-color: var(--light-orange);
+      border: none;
+      color: var(--special-black);
+    }
+    &:active {
+      background-color: var(--orange);
+      border: none;
+    }
+  }
+  small {
+    color: #e84a5f;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    color: #e84a5f;
+    margin: 1rem 0;
+  }
+  .square-loading {
+    margin-top: 1rem;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--orange);
+    animation: rotating 2s infinite;
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .login, .signup {
+    max-width: initial;
+  }
+}
