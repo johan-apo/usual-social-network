@@ -40,7 +40,7 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.14.1"
+    "node-sass": "^7.0.0"
   },
   "description": "A social network like Twitter",
   "main": "index.js",
